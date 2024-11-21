@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>Grid Layout</h1>
+            <p>Adjust the columns, rows, and gap to see changes in the grid layout.</p>
+            <p>Use the Item Playground to modify specific grid items.</p>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item item-1">Item 1</div>
+            <div class="grid-item item-2">Item 2</div>
+            <div class="grid-item item-3">Item 3</div>
+            <div class="grid-item item-4">Item 4</div>
+            <div class="grid-item item-5">Item 5</div>
+            <div class="grid-item item-6">Item 6</div>
+            <div class="grid-item item-7">Item 7</div>
+            <div class="grid-item item-8">Item 8</div>
+            <div class="grid-item item-9">Item 9</div>
+            <div class="grid-item item-10">Item 10</div>
+            <div class="grid-item item-11">Item 11</div>
+            <div class="grid-item item-12">Item 12</div>
+        </div>
+        <div class="box-playground">
+            <h3>Box Playground</h3>
+            <div class="box-columns">
+                <label for="columns">Columns:</label>
+                <input type="range" id="columns" min="1" max="12" value="1"
+                    oninput="document.getElementById('columns-output').value = this.value">
+                <output id="columns-output" for="columns">1</output>
+            </div>
+
+            <div class="box-rows">
+                <label for="rows">Rows:</label>
+                <input type="range" id="rows" min="1" max="12" value="1"
+                    oninput="document.getElementById('rows-output').value = this.value">
+                <output id="rows-output" for="rows">1</output>
+            </div>
+
+            <div class="box-gap">
+                <label for="gap">Gap (px):</label>
+                <input type="range" id="gap" min="0" max="200" value="0" step="5"
+                    oninput="document.getElementById('gap-output').value = this.value + ' px'">
+                <output id="gap-output" for="gap">0 <span> px</span></output">
+            </div>
+
+            <div class="box-justify">
+                <label for="justify">Justify Items:</label>
+                <select id="justify">
+                    <option value="start">Start</option>
+                    <option value="center" selected>Center</option>
+                    <option value="end">End</option>
+                    <option value="stretch" selected>Stretch</option>
+                </select>
+            </div>
+
+            <div class="box-align">
+                <label for="align">Align Items:</label>
+                <select id="align">
+                    <option value="start">Start</option>
+                    <option value="center" selected>Center</option>
+                    <option value="end">End</option>
+                    <option value="stretch" selected>Stretch</option>
+                </select>
+            </div>
+
+            
+
+
+
+        </div>
+        <div class="item-playground">
+            <h3>Item Playground</h3>
+            <div class="select-grid-item">
+                <!-- Select Grid Item -->
+                <label for="select-item">Select Grid Item:</label>
+                <select id="select-item">
+                    <option value="item-1">Item 1</option>
+                    <option value="item-2">Item 2</option>
+                    <option value="item-3">Item 3</option>
+                    <option value="item-4">Item 4</option>
+                    <option value="item-5">Item 5</option>
+                    <option value="item-6">Item 6</option>
+                    <option value="item-7">Item 7</option>
+                    <option value="item-8">Item 8</option>
+                    <option value="item-9">Item 9</option>
+                    <option value="item-10">Item 10</option>
+                    <option value="item-11">Item 11</option>
+                    <option value="item-12">Item 12</option>
+                </select>
+            </div>
+            <div class="item-column-start">
+                <label for="item-column-start">Column Start:</label>
+                <input type="range" id="item-column-start" min="1" max="12" value="auto"
+                    oninput="document.getElementById('item-column-start-output').value = this.value">
+                <output id="item-column-start-output" for="item-column-start">auto</output>
+            </div>
+            <div class="item-column-end">
+                <label for="item-column-end">Column End:</label>
+                <input type="range" id="item-column-end" min="1" max="12" value="auto"
+                    oninput="document.getElementById('item-column-end-output').value = this.value">
+                <output id="item-column-end-output" for="item-column-end">auto</output>
+            </div>
+            <div class="item-row-start">
+                <label for="item-row-start">Row Start:</label>
+                <input type="range" name="item-row-start"" id="item-row-start" min="1" max="12" value="auto"
+                    oninput="document.getElementById('item-row-start-output').value = this.value">
+                <output id="item-row-start-output" for="item-row-start">auto</output>
+            </div>
+            <div class="item-row-end">
+                <label for="item-row-end">Row End:</label>
+                <input type="range" name="item-row-end" id="item-row-end" min="1" max="12" value="auto"
+                    oninput="document.getElementById('item-row-end-output').value = this.value">
+                <output id="item-row-end-output" for="item-row-end">auto</output>
+            </div>
+            <div class="item-justify-self">
+                <!-- Justify Self Control -->
+           <label for="justify-self">Justify Self:</label>
+           <select id="justify-self">
+               <option value="start">Start</option>
+               <option value="end">End</option>
+               <option value="center">Center</option>
+               <option value="stretch" selected >Stretch</option>
+           </select>
+            </div>
+            <div class="item-align-self">
+                <!-- Align Self Control -->
+                <label for="align-self">Align Self:</label>
+                <select id="align-self">
+                    <option value="start">Start</option>
+                    <option value="end">End</option>
+                    <option value="center">Center</option>
+                    <option value="stretch" selected>Stretch</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
